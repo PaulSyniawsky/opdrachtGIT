@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+/*
+Maak een array maanden met volgende 3 elementen: januari, februari, maart.
+
+Voeg d.m.v. het gebruik van indexen volgende maanden toe aan deze array: april, mei, juni.
+
+Voeg zonder gebruik te maken van een index volgende maand toe achteraan de array: juli.
+
+Voeg zonder gebruik te maken van een index volgende maanden in 1 keer toe achteraan de array, het moeten dus verschillende elementen zijn, niet 1 element: augustus, september, oktober, november, december.
+
+Schrijf de array maanden in een paragraaf in het document. Het resultaat zou moeten zijn: januari,februari,maart,april,mei,juni,juli,augustus,september,oktober,november,december
+
+Bereken de lengte van de array maanden en druk deze als volgt af in een paragraaf:
+
+Er zijn 12 maanden in de array.
+
+Controleer of de maand "March" zich bevindt in de array maanden en druk de positie af als volgt:
+
+De maand "March" bevindt zich in de array op positie: -1
+*/
+
+
+let maanden = ["januari", "februari", "maart"];
+
+maanden[3]= "april";
+maanden[4]= "mei";
+maanden[5]="juni";
+/*maanden[maanden.length] = "april";
+maanden[maanden.length] = "mei";
+maanden[maanden.length] = "juni";*/
+maanden.push("juli");
+
+maanden.push("augustus", "september", "oktober", "november", "december");
+document.write(`<p>${maanden}</p>`);
+
+
+document.write(`<p>Er zijn ${maanden.length} maanden in de array.</p>`);
+
+
+
+let positieMarch = maanden.indexOf("March");
+document.write(`<p>De maand "March" bevindt zich in de array op positie ${positieMarch}</p>`);
+		
+
+
+
+
+
+
+
+/*
+Maak een array namen aan met volgende elementen: Erik, Sofie, Adam, Zorro
+
+Sorteer de array namen.
+
+Schrijf de namen array in een paragraaf op de volgende manier:
+De gesorteerde namen zijn: Adam,Erik,Sofie,Zorro
+
+Vraag aan de gebruiker welke naam hij wil zoeken. Schrijf in het document de gezochte naam en de positie als volgt:
+De naam Bert bevindt zich op positie: -1
+*/
+
+let namen= ["Erik", "Sofie", "Adam", "Zorro"];
+namen.sort();
+document.write(`<p>De gesorteerde namen zijn: ${namen}</p>`);
+
+let keuze= prompt("Welke naam wil u zoeken?");
+let uitkomst= namen.indexOf(keuze);
+document.write(`<p>De naam ${keuze} bevindt zich op positie: ${uitkomst} </p>`);
+
+
+
+/*
+Vraag aan de gebruiker:
+Wat je is volledige naam (voornaam achternaam)?
+
+Maak van deze string een array.
+
+Draai deze array om.
+
+Maak van deze omgedraaide array dan terug een string.
+
+Schrijf de omgedraaide naam in een paragraaf als volgt:
+Jouw naam genoteerd als familienaam voornaam is: Script Java
+*/
+
+let vraag = prompt("Wat is je volledige naam (voornaam achternaam)");
+let naam = vraag.split(" ");
+naam.reverse();
+nieuweNaam = naam.join(" ");
+
+document.write(`<p>Jouw naam genoteerd als familienaam voornaam is: ${nieuweNaam}</p>`);
+
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>
